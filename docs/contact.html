@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Luca Anzaldi</title>
+    <meta name="description" content="Contact details and collaboration profile for Luca Anzaldi." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="contact" class="bg-[var(--bg)] font-sans text-slate-900">
+    <div class="page-shell">
+      <aside class="page-sidebar">
+        <div class="sidebar-card rounded-[32px] text-white shadow-glow">
+        <div class="relative flex h-full min-h-[620px] flex-col justify-between p-8">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/80">
+              Portfolio 2026
+            </div>
+            <div class="space-y-4">
+              <p class="text-sm uppercase tracking-[0.4em] text-mint">Luca Anzaldi</p>
+                If the topic is AI, systems, optimization, or product engineering, there is a good chance I will enjoy
+                it.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <nav class="sidebar-nav flex flex-col gap-2 text-sm font-semibold">
+              <a data-nav="latest" href="index.html">Latest</a>
+              <a data-nav="projects" href="projects.html">Projects</a>
+              <a data-nav="skills" href="skills.html">Skills</a>
+              <a data-nav="leetcode" href="leetcode.html">LeetCode</a>
+              <a data-nav="certifications" href="certifications.html">Certification</a>
+              <a data-nav="contact" href="contact.html">Contact</a>
+            </nav>
+
+          </div>
+        </div>
+        </div>
+      </aside>
+
+      <main class="page-main">
+        <section class="grid gap-6 xl:grid-cols-[1.22fr,0.78fr]">
+          <div class="reveal space-y-6">
+            <p class="eyebrow">Contact</p>
+            <div class="space-y-4">
+              <p class="max-w-2xl text-lg leading-8 text-slate-600">
+                The fastest route is email. GitHub, phone, and CV requests are available directly from the page without
+                publishing private documents online.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a class="primary-button" href="mailto:luca.anzaldi@studio.unibo.it">Send an email</a>
+              <a
+                class="secondary-button"
+                href="mailto:luca.anzaldi@studio.unibo.it?subject=CV%20request&body=Hello%20Luca%2C%0A%0AI%20would%20like%20to%20request%20your%20CV.%0A"
+              >
+                Request CV
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="reveal contact-card">
+            <p class="eyebrow">Email</p>
+            <h3>luca.anzaldi@studio.unibo.it</h3>
+            <a href="mailto:luca.anzaldi@studio.unibo.it" class="text-sm font-semibold text-coral">Open mail</a>
+          </article>
+          <article class="reveal contact-card">
+            <p class="eyebrow">GitHub</p>
+            <h3>github.com/lucaAnza</h3>
+            <a href="https://github.com/lucaAnza" target="_blank" rel="noreferrer" class="text-sm font-semibold text-coral">Visit profile</a>
+          </article>
+          <article class="reveal contact-card">
+            <p class="eyebrow">Location</p>
+            <h3>Bologna, Italy</h3>
+            <span class="text-sm font-semibold text-slate-500">Europe-based</span>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>

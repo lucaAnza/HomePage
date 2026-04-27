@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- HEAD SECTION -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest | Luca Anzaldi</title>
+    <meta
+      name="description"
+      content="Luca Anzaldi portfolio: latest work, projects, skills, LeetCode progress, certifications, and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <!-- BODY SECTION -->
+  <body data-page="latest" class="bg-[var(--bg)] font-sans text-slate-900">
+    <div class="page-shell">
+      
+      <!-- LEFT MENU -->
+      <aside class="page-sidebar">
+        <div class="sidebar-card rounded-[32px] text-white shadow-glow">
+        <div class="relative flex h-full min-h-[620px] flex-col justify-between p-8">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.35em] text-white/80">
+              Portfolio 2026
+            </div>
+            <div class="space-y-4">
+              <p class="text-sm uppercase tracking-[0.4em] text-mint">Luca Anzaldi</p>
+              <p class="max-w-xs text-sm leading-6 text-white/78">
+                M.Sc. in Artificial Intelligence at the University of Bologna, with hands-on work in CUDA, optimization,
+                and product-focused web engineering.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <nav class="sidebar-nav flex flex-col gap-2 text-sm font-semibold">
+              <a data-nav="latest" href="index.html">Latest</a>
+              <a data-nav="projects" href="projects.html">Projects</a>
+              <a data-nav="skills" href="skills.html">Skills</a>
+              <a data-nav="leetcode" href="leetcode.html">LeetCode</a>
+              <a data-nav="certifications" href="certifications.html">Certification</a>
+              <a data-nav="contact" href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+        </div>
+      </aside>
+
+      
+
+      <main class="page-main">
+        <section class="grid gap-6 xl:grid-cols-[1.22fr,0.78fr]">
+          <div class="reveal space-y-6">
+            <p class="eyebrow">Latest</p>
+
+            <div class="flex flex-wrap gap-3">
+              <a class="primary-button" href="projects.html">Explore Projects</a>
+              <a
+                class="secondary-button"
+                href="mailto:anzaldi.luca@gmail.com?subject=CV%20request&body=Hello%20Luca%2C%0A%0AI%20would%20like%20to%20request%20your%20CV.%0A"
+              >
+                Request CV
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-6 grid gap-4 md:grid-cols-3">
+          <!--CURRENT BASE-->
+          <article class="reveal metric-card flex flex-col">
+            <p class="metric-label">Current base</p>
+            <h3>Bologna, Italy</h3>
+            <p>
+              Artificial Intelligence program covering machine learning, data-driven modeling, and algorithmic approaches to intelligent systems
+            </p>
+            <!-- badges -->
+            <div class="mt-auto pt-4">
+              <a href="https://maps.google.com/?q=44.4949,11.3426"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img 
+                  class="h-8"
+                  src="https://img.shields.io/static/v1?label=%20&message=%F0%9F%93%8D%20Bologna&color=E74C3C&style=for-the-badge&logo=googlemaps&logoColor=white" 
+                  alt="Location: Bologna">
+              </a>
+            </div>
+          </article>
+
+          <!-- RECENT MILESTONE -->
+          <article class="reveal metric-card flex flex-col h-full">
+            <p class="metric-label">Recent milestone</p>
+            <h3>+400% stereo-matching speedup</h3>
+            <p>
+              Built a CUDA-based GPU path for ORB-SLAM3 stereo matching, focusing on data parallelism, shared memory,
+              and careful integration into the C++ pipeline.
+            </p>
+            <!-- badges -->
+            <div class="flex gap-3 mt-auto pt-4">
+              <!-- C++ -->
+              <img 
+                class="h-8"
+                src="https://img.shields.io/static/v1?label=%20&message=C%2B%2B&color=00599C&style=for-the-badge&logo=cplusplus&logoColor=white" 
+                alt="C++">
+
+              <!-- CUDA -->
+              <img 
+                class="h-8"
+                src="https://img.shields.io/static/v1?label=%20&message=CUDA&color=76B900&style=for-the-badge&logo=nvidia&logoColor=white" 
+                alt="CUDA">
+
+              <!-- GitHub -->
+              <a href="https://github.com/lucaAnza/Gpu_algorithm"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img 
+                  class="h-8"
+                  src="https://img.shields.io/static/v1?label=%20&message=Code&color=181717&style=for-the-badge&logo=github&logoColor=white" 
+                  alt="GitHub repository">
+              </a>
+            </div>
+          </article>
+
+          <!--WORK STYLE-->
+          <article class="reveal metric-card">
+            <p class="metric-label">Work style</p>
+            <h3>Research + implementation</h3>
+            <p>
+              Comfortable moving from modeling and experimentation into real software: Python, C++, TypeScript,
+              Django, React, and solver-based workflows.
+            </p>
+          </article>
+        </section>
+
+        <section class="mt-8 grid gap-6">
+          <article class="reveal editorial-card">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <h3 class="section-title">My recent path</h3>
+              </div>
+              <span class="rounded-full bg-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-tide">
+                2026
+              </span>
+            </div>
+            <div class="mt-6 space-y-4">
+              <div class="timeline-item">
+                <p class="timeline-date">Present</p>
+                <h4>M.Sc. in Artificial Intelligence</h4>
+                <p>University of Bologna. Artificial Intelligence program covering machine learning, data-driven modeling, and algorithmic approaches to intelligent systems</p>
+              </div>
+              <div class="timeline-item">
+                <p class="timeline-date">Jan. 2025 - Feb. 2026</p>
+                <h4>Erasmus+ Exchange at SDU</h4>
+                <p>
+                  Graduate coursework in advanced optimization, NLP, data visualization, and experience-based design,
+                  with collaborative international team work.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <p class="timeline-date">Feb. 2024 - Sept. 2024</p>
+                <h4>Undergraduate Research in ORB-SLAM3 and GPU Optimization</h4>
+                <p>
+                  Ported stereo matching from CPU to GPU using CUDA and C++, then benchmarked the performance impact
+                  with automated Python experiments.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
