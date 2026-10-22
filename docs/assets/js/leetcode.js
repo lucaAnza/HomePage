@@ -1,99 +1,165 @@
-const leetcodeEntries = [
-  { category: "Arrays & Hashing", name: "Contains Duplicate", difficulty: "Easy", solved: true },
-  { category: "Arrays & Hashing", name: "2 Sum", difficulty: "Easy", solved: true },
-  { category: "Arrays & Hashing", name: "Valid Anagram", difficulty: "Easy", solved: true },
-  { category: "Arrays & Hashing", name: "Longest Consecutive Sequence", difficulty: "Medium", solved: true },
-  { category: "Arrays & Hashing", name: "Group Anagrams", difficulty: "Medium", solved: true },
-  { category: "Arrays & Hashing", name: "Encode and Decode Strings", difficulty: "Medium", solved: true },
-  { category: "Arrays & Hashing", name: "Product of Array Except Self", difficulty: "Medium", solved: true },
-  { category: "Arrays & Hashing", name: "Top K Frequent Elements", difficulty: "Medium", solved: true },
-  { category: "Two Pointers", name: "Valid Palindrome", difficulty: "Easy", solved: true },
-  { category: "Two Pointers", name: "3Sum", difficulty: "Medium", solved: true },
-  { category: "Two Pointers", name: "Container With Most Water", difficulty: "Medium", solved: true },
-  { category: "Stack", name: "Valid Parentheses", difficulty: "Easy", solved: true },
-  { category: "Binary Search", name: "Koko Eating Bananas", difficulty: "Medium", solved: true },
-  { category: "Binary Search", name: "Find Minimum in Rotated Sorted Array", difficulty: "Medium", solved: true },
-  { category: "Binary Search", name: "Search in Rotated Sorted Array", difficulty: "Medium", solved: true },
-  { category: "Sliding Window", name: "Best Time to Buy and Sell Stock", difficulty: "Easy", solved: true },
-  { category: "Sliding Window", name: "Longest Substring Without Repeating Characters", difficulty: "Medium", solved: true },
-  { category: "Linked List", name: "Reverse Linked List", difficulty: "Easy", solved: true },
-  { category: "Linked List", name: "Merged Two Linked Lists", difficulty: "Easy", solved: true },
-  { category: "Linked List", name: "Linked List Cycle Detection", difficulty: "Easy", solved: true },
-  { category: "Linked List", name: "Reorder Linked List", difficulty: "Medium", solved: true },
-  { category: "Linked List", name: "Remove Node From End of Linked List", difficulty: "Medium", solved: true },
-  { category: "Trees", name: "Invert Binary Tree", difficulty: "Easy", solved: true },
-  { category: "Trees", name: "Maximum Depth of Binary Tree", difficulty: "Easy", solved: true },
-  { category: "Trees", name: "Same Tree", difficulty: "Easy", solved: true },
-  { category: "Trees", name: "Subtree of Another Tree", difficulty: "Easy", solved: true },
-  { category: "Trees", name: "Lowest Common Ancestor in Binary Search Tree", difficulty: "Medium", solved: true },
-  { category: "Trees", name: "Binary Tree Level Order Traversal", difficulty: "Medium", solved: true },
-  { category: "Trees", name: "Valid Binary Search Tree", difficulty: "Medium", solved: true },
-  { category: "Trees", name: "Kth Smallest Integer in BST", difficulty: "Medium", solved: true },
-  { category: "Trees", name: "Construct Binary Tree from Preorder and Inorder Traversal", difficulty: "Medium", solved: true },
-  { category: "Backtracking", name: "Combination Sum", difficulty: "Medium", solved: true },
-  { category: "Backtracking", name: "Word Search", difficulty: "Medium", solved: true },
-  { category: "Backtracking", name: "Subsets", difficulty: "Medium", solved: true },
-  { category: "Backtracking", name: "Combination Sum II", difficulty: "Medium", solved: true },
-  { category: "Heap / Priority Queue", name: "Kth Largest Element in a Stream", difficulty: "Easy", solved: true },
-  { category: "Greedy", name: "Maximum Subarray", difficulty: "Medium", solved: true },
-  { category: "Graphs", name: "Number of Islands", difficulty: "Medium", solved: true },
-  { category: "Graphs", name: "Clone Graph", difficulty: "Medium", solved: true },
-  { category: "Graphs", name: "Pacific Atlantic Water Flow", difficulty: "Medium", solved: true },
-  { category: "Graphs", name: "Course Schedule", difficulty: "Medium", solved: true },
-  { category: "1-D DP", name: "Climbing Stairs", difficulty: "Easy", solved: true },
-  { category: "1-D DP", name: "Min Cost Climbing Stairs", difficulty: "Easy", solved: true },
-  { category: "1-D DP", name: "Decode Ways", difficulty: "Medium", solved: false },
-  { category: "1-D DP", name: "Coin Change", difficulty: "Medium", solved: true },
-  { category: "1-D DP", name: "House Robber", difficulty: "Medium", solved: true },
-  { category: "1-D DP", name: "House Robber II", difficulty: "Medium", solved: true },
-  { category: "1-D DP", name: "Longest Palindromic Substring", difficulty: "Medium", solved: true },
-  { category: "1-D DP", name: "Palindromic Substrings", difficulty: "Medium", solved: true },
-];
-
-const emptyCategories = [
+const roadmapCategories = [
+  "Arrays & Hashing",
+  "Two Pointers",
+  "Sliding Window",
+  "Binary Search",
+  "Linked List",
+  "Stack",
+  "Trees",
   "Tries",
-  "Intervals",
+  "Backtracking",
+  "Heap / Priority Queue",
+  "Graphs",
   "Advanced Graphs",
-  "2-D DP",
+  "1-D Dynamic Programming",
+  "2-D Dynamic Programming",
+  "Greedy",
+  "Intervals",
   "Bit Manipulation",
   "Math & Geometry",
 ];
 
+const solvedProblems = [
+  { category: "Arrays & Hashing", name: "Contains Duplicate", difficulty: "Easy" },
+  { category: "Arrays & Hashing", name: "2 Sum", difficulty: "Easy" },
+  { category: "Arrays & Hashing", name: "Valid Anagram", difficulty: "Easy" },
+  { category: "Arrays & Hashing", name: "Longest Consecutive Sequence", difficulty: "Medium" },
+  { category: "Arrays & Hashing", name: "Group Anagrams", difficulty: "Medium" },
+  { category: "Arrays & Hashing", name: "Encode and Decode Strings", difficulty: "Medium" },
+  { category: "Arrays & Hashing", name: "Product of Array Except Self", difficulty: "Medium" },
+  { category: "Arrays & Hashing", name: "Top K Frequent Elements", difficulty: "Medium" },
+  { category: "Two Pointers", name: "Valid Palindrome", difficulty: "Easy" },
+  { category: "Two Pointers", name: "3Sum", difficulty: "Medium" },
+  { category: "Two Pointers", name: "Container With Most Water", difficulty: "Medium" },
+  { category: "Sliding Window", name: "Best Time to Buy and Sell Stock", difficulty: "Easy" },
+  { category: "Sliding Window", name: "Longest Substring Without Repeating Characters", difficulty: "Medium" },
+  { category: "Binary Search", name: "Koko Eating Bananas", difficulty: "Medium" },
+  { category: "Binary Search", name: "Find Minimum in Rotated Sorted Array", difficulty: "Medium" },
+  { category: "Binary Search", name: "Search in Rotated Sorted Array", difficulty: "Medium" },
+  { category: "Linked List", name: "Reverse Linked List", difficulty: "Easy" },
+  { category: "Linked List", name: "Merged Two Linked Lists", difficulty: "Easy" },
+  { category: "Linked List", name: "Linked List Cycle Detection", difficulty: "Easy" },
+  { category: "Linked List", name: "Reorder Linked List", difficulty: "Medium" },
+  { category: "Linked List", name: "Remove Node From End of Linked List", difficulty: "Medium" },
+  { category: "Stack", name: "Valid Parentheses", difficulty: "Easy" },
+  { category: "Trees", name: "Invert Binary Tree", difficulty: "Easy" },
+  { category: "Trees", name: "Maximum Depth of Binary Tree", difficulty: "Easy" },
+  { category: "Trees", name: "Same Tree", difficulty: "Easy" },
+  { category: "Trees", name: "Subtree of Another Tree", difficulty: "Easy" },
+  { category: "Trees", name: "Lowest Common Ancestor in Binary Search Tree", difficulty: "Medium" },
+  { category: "Trees", name: "Binary Tree Level Order Traversal", difficulty: "Medium" },
+  { category: "Trees", name: "Valid Binary Search Tree", difficulty: "Medium" },
+  { category: "Trees", name: "Kth Smallest Integer in BST", difficulty: "Medium" },
+  { category: "Trees", name: "Construct Binary Tree from Preorder and Inorder Traversal", difficulty: "Medium" },
+  { category: "Backtracking", name: "Combination Sum", difficulty: "Medium" },
+  { category: "Backtracking", name: "Word Search", difficulty: "Medium" },
+  { category: "Backtracking", name: "Subsets", difficulty: "Medium" },
+  { category: "Backtracking", name: "Combination Sum II", difficulty: "Medium" },
+  { category: "Heap / Priority Queue", name: "Kth Largest Element in a Stream", difficulty: "Easy" },
+  { category: "Graphs", name: "Number of Islands", difficulty: "Medium" },
+  { category: "Graphs", name: "Clone Graph", difficulty: "Medium" },
+  { category: "Graphs", name: "Pacific Atlantic Water Flow", difficulty: "Medium" },
+  { category: "Graphs", name: "Course Schedule", difficulty: "Medium" },
+  { category: "1-D Dynamic Programming", name: "Climbing Stairs", difficulty: "Easy" },
+  { category: "1-D Dynamic Programming", name: "Min Cost Climbing Stairs", difficulty: "Easy" },
+  { category: "1-D Dynamic Programming", name: "Coin Change", difficulty: "Medium" },
+  { category: "1-D Dynamic Programming", name: "House Robber", difficulty: "Medium" },
+  { category: "1-D Dynamic Programming", name: "House Robber II", difficulty: "Medium" },
+  { category: "1-D Dynamic Programming", name: "Longest Palindromic Substring", difficulty: "Medium" },
+  { category: "1-D Dynamic Programming", name: "Palindromic Substrings", difficulty: "Medium" },
+  { category: "Greedy", name: "Maximum Subarray", difficulty: "Medium" },
+];
+
+const helperReference = [
+  {
+    name: "List / Array",
+    rows: [
+      ["Create", "items = []", "int[] items = {};"],
+      ["Dynamic", "items = []", "List<Integer> items = new ArrayList<>();"],
+      ["Add", "items.append(x)", "items.add(x);"],
+      ["Read", "items[i]", "items.get(i);"],
+      ["Remove", "items.pop(i)", "items.remove(i);"],
+      ["Length", "len(items)", "items.size();"],
+      ["Sort", "items.sort()", "Collections.sort(items);"],
+    ],
+  },
+  {
+    name: "HashMap",
+    rows: [
+      ["Create", "values = {}", "Map<K, V> values = new HashMap<>();"],
+      ["Set", "values[key] = value", "values.put(key, value);"],
+      ["Get", "values.get(key)", "values.get(key);"],
+      ["Contains", "key in values", "values.containsKey(key);"],
+      ["Remove", "values.pop(key)", "values.remove(key);"],
+      ["Iterate", "for key, value in values.items():", "for (var entry : values.entrySet()) { }"],
+    ],
+  },
+  {
+    name: "Set",
+    rows: [
+      ["Create", "seen = set()", "Set<Integer> seen = new HashSet<>();"],
+      ["Add", "seen.add(x)", "seen.add(x);"],
+      ["Contains", "x in seen", "seen.contains(x);"],
+      ["Remove", "seen.discard(x)", "seen.remove(x);"],
+      ["Length", "len(seen)", "seen.size();"],
+    ],
+  },
+  {
+    name: "Stack",
+    rows: [
+      ["Create", "stack = []", "Deque<Integer> stack = new ArrayDeque<>();"],
+      ["Push", "stack.append(x)", "stack.push(x);"],
+      ["Pop", "stack.pop()", "stack.pop();"],
+      ["Peek", "stack[-1]", "stack.peek();"],
+    ],
+  },
+  {
+    name: "Queue / Deque",
+    rows: [
+      ["Create", "queue = deque()", "Queue<Integer> queue = new ArrayDeque<>();"],
+      ["Enqueue", "queue.append(x)", "queue.offer(x);"],
+      ["Dequeue", "queue.popleft()", "queue.poll();"],
+      ["Front", "queue[0]", "queue.peek();"],
+    ],
+  },
+  {
+    name: "Min Heap",
+    rows: [
+      ["Create", "heap = []", "PriorityQueue<Integer> heap = new PriorityQueue<>();"],
+      ["Push", "heapq.heappush(heap, x)", "heap.offer(x);"],
+      ["Pop", "heapq.heappop(heap)", "heap.poll();"],
+      ["Peek", "heap[0]", "heap.peek();"],
+    ],
+  },
+];
+
 document.addEventListener("DOMContentLoaded", () => {
-  const solvedEntries = leetcodeEntries.filter((entry) => entry.solved);
-  const pendingEntries = leetcodeEntries.filter((entry) => !entry.solved);
+  const difficultyCounts = countDifficulties(solvedProblems);
+  const categoryCounts = Object.fromEntries(roadmapCategories.map((category) => [category, 0]));
 
-  const difficultyCounts = solvedEntries.reduce(
-    (accumulator, entry) => {
-      accumulator[entry.difficulty] += 1;
-      return accumulator;
-    },
-    { Easy: 0, Medium: 0 }
-  );
+  solvedProblems.forEach((problem) => {
+    categoryCounts[problem.category] += 1;
+  });
 
-  const categoryCounts = solvedEntries.reduce((accumulator, entry) => {
-    accumulator[entry.category] = (accumulator[entry.category] || 0) + 1;
-    return accumulator;
-  }, {});
-
-  const groupedEntries = solvedEntries.reduce((accumulator, entry) => {
-    if (!accumulator[entry.category]) {
-      accumulator[entry.category] = [];
-    }
-    accumulator[entry.category].push(entry);
-    return accumulator;
-  }, {});
-
-  document.getElementById("total-solved").textContent = String(solvedEntries.length);
+  document.getElementById("total-solved").textContent = String(solvedProblems.length);
   document.getElementById("easy-count").textContent = String(difficultyCounts.Easy);
   document.getElementById("medium-count").textContent = String(difficultyCounts.Medium);
-  document.getElementById("pending-count").textContent = String(pendingEntries.length);
+  document.getElementById("hard-count").textContent = String(difficultyCounts.Hard);
 
   renderCharts(difficultyCounts, categoryCounts);
-  renderGroups(groupedEntries, categoryCounts);
-  renderPending(pendingEntries);
-  renderEmptyCategories(emptyCategories);
+  renderGroups();
+  renderHelper();
 });
+
+function countDifficulties(problems) {
+  return problems.reduce(
+    (counts, problem) => {
+      counts[problem.difficulty] += 1;
+      return counts;
+    },
+    { Easy: 0, Medium: 0, Hard: 0 }
+  );
+}
 
 function renderCharts(difficultyCounts, categoryCounts) {
   const difficultyChart = document.getElementById("difficultyChart");
@@ -106,12 +172,12 @@ function renderCharts(difficultyCounts, categoryCounts) {
   new Chart(difficultyChart, {
     type: "doughnut",
     data: {
-      labels: ["Easy", "Medium"],
+      labels: ["Easy", "Medium", "Hard"],
       datasets: [
         {
-          data: [difficultyCounts.Easy, difficultyCounts.Medium],
-          backgroundColor: ["#2bb673", "#e66a3f"],
-          borderColor: ["#ffffff", "#ffffff"],
+          data: [difficultyCounts.Easy, difficultyCounts.Medium, difficultyCounts.Hard],
+          backgroundColor: ["#22c55e", "#eab308", "#ef4444"],
+          borderColor: ["#ffffff", "#ffffff", "#ffffff"],
           borderWidth: 6,
           hoverOffset: 8,
         },
@@ -127,29 +193,25 @@ function renderCharts(difficultyCounts, categoryCounts) {
             usePointStyle: true,
             boxWidth: 10,
             padding: 18,
-            font: {
-              family: "Manrope",
-              weight: "700",
-            },
+            font: { family: "Manrope", weight: "700" },
           },
         },
       },
     },
   });
 
-  const sortedCategories = Object.entries(categoryCounts).sort((left, right) => right[1] - left[1]);
+  const populatedCategories = roadmapCategories.filter((category) => categoryCounts[category] > 0);
   const palette = ["#113847", "#1d5364", "#286f83", "#3291a4", "#58baa8", "#79cdbc", "#a1e2d4"];
-  const categoryColors = sortedCategories.map((_, index) => palette[index % palette.length]);
 
   new Chart(categoryChart, {
     type: "bar",
     data: {
-      labels: sortedCategories.map(([category]) => category),
+      labels: populatedCategories,
       datasets: [
         {
           label: "Solved",
-          data: sortedCategories.map(([, value]) => value),
-          backgroundColor: categoryColors,
+          data: populatedCategories.map((category) => categoryCounts[category]),
+          backgroundColor: populatedCategories.map((_, index) => palette[index % palette.length]),
           borderRadius: 12,
           borderSkipped: false,
         },
@@ -158,133 +220,185 @@ function renderCharts(difficultyCounts, categoryCounts) {
     options: {
       indexAxis: "y",
       maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
+      plugins: { legend: { display: false } },
       scales: {
         x: {
-          ticks: {
-            precision: 0,
-            font: {
-              family: "Manrope",
-              weight: "700",
-            },
-          },
-          grid: {
-            color: "rgba(148, 163, 184, 0.14)",
-          },
+          ticks: { precision: 0, font: { family: "Manrope", weight: "700" } },
+          grid: { color: "rgba(148, 163, 184, 0.14)" },
         },
         y: {
-          ticks: {
-            font: {
-              family: "Manrope",
-              weight: "700",
-            },
-          },
-          grid: {
-            display: false,
-          },
+          ticks: { font: { family: "Manrope", weight: "700" } },
+          grid: { display: false },
         },
       },
     },
   });
 }
 
-function renderGroups(groupedEntries, categoryCounts) {
+function renderGroups() {
   const groupsRoot = document.getElementById("leetcode-groups");
   if (!groupsRoot) {
     return;
   }
 
-  Object.entries(groupedEntries)
-    .sort((left, right) => categoryCounts[right[0]] - categoryCounts[left[0]])
-    .forEach(([category, entries]) => {
-      const section = document.createElement("section");
-      section.className = "leetcode-group";
+  roadmapCategories.forEach((category) => {
+    const problems = solvedProblems.filter((problem) => problem.category === category);
+    const difficultyCounts = countDifficulties(problems);
+    const group = document.createElement("details");
+    group.className = "leetcode-group";
 
-      const header = document.createElement("div");
-      header.className = "leetcode-group-header";
-
-      const title = document.createElement("h4");
-      title.textContent = category;
-
-      const total = document.createElement("span");
-      total.className = "cert-status bg-slate-100 text-slate-500";
-      total.textContent = `${entries.length} solved`;
-
-      header.appendChild(title);
-      header.appendChild(total);
-      section.appendChild(header);
-
-      const list = document.createElement("div");
-      list.className = "leetcode-list";
-
-      entries.forEach((entry) => {
-        const item = document.createElement("div");
-        item.className = "leetcode-item";
-
-        const label = document.createElement("span");
-        label.className = "leetcode-item-name";
-        label.textContent = entry.name;
-
-        const badge = document.createElement("span");
-        badge.className = `difficulty-badge ${entry.difficulty === "Easy" ? "difficulty-easy" : "difficulty-medium"}`;
-        badge.textContent = entry.difficulty;
-
-        item.appendChild(label);
-        item.appendChild(badge);
-        list.appendChild(item);
-      });
-
-      section.appendChild(list);
-      groupsRoot.appendChild(section);
-    });
-}
-
-function renderPending(entries) {
-  const pendingRoot = document.getElementById("pending-list");
-  if (!pendingRoot) {
-    return;
-  }
-
-  if (!entries.length) {
-    const done = document.createElement("p");
-    done.className = "text-sm leading-6 text-slate-600";
-    done.textContent = "No pending entries in the tracked list.";
-    pendingRoot.appendChild(done);
-    return;
-  }
-
-  entries.forEach((entry) => {
-    const card = document.createElement("div");
-    card.className = "rounded-[22px] border border-slate-200 bg-slate-50 p-4";
+    const header = document.createElement("summary");
+    header.className = "leetcode-group-header";
 
     const title = document.createElement("h4");
-    title.className = "font-display text-xl text-slate-900";
-    title.textContent = entry.name;
+    title.textContent = category;
 
-    const meta = document.createElement("p");
-    meta.className = "mt-2 text-sm leading-6 text-slate-600";
-    meta.textContent = `${entry.category} • ${entry.difficulty}`;
+    const countSummary = document.createElement("span");
+    countSummary.className = "leetcode-group-summary";
+    ["Easy", "Medium", "Hard"].forEach((difficulty) => {
+      countSummary.appendChild(createDifficultyCount(difficulty, difficultyCounts[difficulty]));
+    });
 
-    card.appendChild(title);
-    card.appendChild(meta);
-    pendingRoot.appendChild(card);
+    const arrow = document.createElement("span");
+    arrow.className = "leetcode-group-arrow";
+    arrow.setAttribute("aria-hidden", "true");
+
+    header.append(title, countSummary, arrow);
+    group.appendChild(header);
+
+    const list = document.createElement("div");
+    list.className = "leetcode-list";
+
+    if (!problems.length) {
+      const emptyMessage = document.createElement("p");
+      emptyMessage.className = "leetcode-empty";
+      emptyMessage.textContent = "No solved problems in this section yet.";
+      list.appendChild(emptyMessage);
+    } else {
+      problems.forEach((problem) => list.appendChild(createProblemItem(problem)));
+    }
+
+    group.appendChild(list);
+    groupsRoot.appendChild(group);
   });
 }
 
-function renderEmptyCategories(categories) {
-  const root = document.getElementById("empty-categories");
-  if (!root) {
+function createDifficultyCount(difficulty, count) {
+  const item = document.createElement("span");
+  item.className = "difficulty-count";
+  item.title = `${difficulty}: ${count}`;
+
+  const dot = document.createElement("span");
+  dot.className = `difficulty-dot difficulty-dot-${difficulty.toLowerCase()}`;
+  dot.setAttribute("aria-hidden", "true");
+
+  const value = document.createElement("span");
+  value.textContent = String(count);
+
+  const label = document.createElement("span");
+  label.className = "sr-only";
+  label.textContent = ` ${difficulty.toLowerCase()}`;
+
+  item.append(dot, value, label);
+  return item;
+}
+
+function createProblemItem(problem) {
+  const item = document.createElement("div");
+  item.className = "leetcode-item";
+
+  const label = document.createElement("span");
+  label.className = "leetcode-item-name";
+  label.textContent = problem.name;
+
+  const badge = document.createElement("span");
+  badge.className = `difficulty-badge difficulty-${problem.difficulty.toLowerCase()}`;
+  badge.textContent = problem.difficulty;
+
+  item.append(label, badge);
+  return item;
+}
+
+function renderHelper() {
+  const helperRoot = document.getElementById("leetcode-helper");
+  if (!helperRoot) {
     return;
   }
 
-  categories.forEach((category) => {
-    const chip = document.createElement("span");
-    chip.className = "rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-500";
-    chip.textContent = category;
-    root.appendChild(chip);
+  helperReference.forEach((section) => {
+    const card = document.createElement("section");
+    card.className = "helper-card";
+
+    const title = document.createElement("h4");
+    title.textContent = section.name;
+
+    const tableWrap = document.createElement("div");
+    tableWrap.className = "helper-table-wrap";
+
+    const table = document.createElement("table");
+    table.className = "helper-table";
+    table.appendChild(createHelperTableHead());
+
+    const body = document.createElement("tbody");
+    section.rows.forEach(([action, python, java]) => {
+      const row = document.createElement("tr");
+      const actionCell = document.createElement("th");
+      actionCell.scope = "row";
+      actionCell.textContent = action;
+      row.append(actionCell, createCodeCell(python), createCodeCell(java));
+      body.appendChild(row);
+    });
+
+    table.appendChild(body);
+    tableWrap.appendChild(table);
+    card.append(title, tableWrap);
+    helperRoot.appendChild(card);
   });
+}
+
+function createHelperTableHead() {
+  const head = document.createElement("thead");
+  const row = document.createElement("tr");
+
+  const actionHeader = document.createElement("th");
+  actionHeader.scope = "col";
+  actionHeader.textContent = "Action";
+
+  row.append(
+    actionHeader,
+    createLanguageHeader(
+      "Python · Primary",
+      "https://img.shields.io/badge/Python-Primary-3776AB?style=flat&logo=python&logoColor=white"
+    ),
+    createLanguageHeader(
+      "Java · Secondary",
+      "https://img.shields.io/badge/Java-Secondary-ED8B00?style=flat&logo=openjdk&logoColor=white"
+    )
+  );
+
+  head.appendChild(row);
+  return head;
+}
+
+function createLanguageHeader(label, badgeUrl) {
+  const cell = document.createElement("th");
+  cell.scope = "col";
+
+  const badge = document.createElement("img");
+  badge.className = "helper-language-badge";
+  badge.src = badgeUrl;
+  badge.alt = label;
+  badge.loading = "lazy";
+  badge.referrerPolicy = "no-referrer";
+
+  cell.appendChild(badge);
+  return cell;
+}
+
+function createCodeCell(value) {
+  const cell = document.createElement("td");
+  const code = document.createElement("code");
+  code.textContent = value;
+  cell.appendChild(code);
+  return cell;
 }
