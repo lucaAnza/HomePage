@@ -240,18 +240,18 @@ function renderCharts(difficultyCounts, categoryCounts) {
     },
   });
 
-  const populatedCategories = roadmapCategories.filter((category) => categoryCounts[category] > 0);
+  const displayedCategories = roadmapCategories;
   const palette = ["#113847", "#1d5364", "#286f83", "#3291a4", "#58baa8", "#79cdbc", "#a1e2d4"];
 
   new Chart(categoryChart, {
     type: "bar",
     data: {
-      labels: populatedCategories,
+      labels: displayedCategories,
       datasets: [
         {
           label: "Solved",
-          data: populatedCategories.map((category) => categoryCounts[category]),
-          backgroundColor: populatedCategories.map((_, index) => palette[index % palette.length]),
+          data: displayedCategories.map((category) => categoryCounts[category]),
+          backgroundColor: displayedCategories.map((_, index) => palette[index % palette.length]),
           borderRadius: 12,
           borderSkipped: false,
         },
@@ -267,7 +267,7 @@ function renderCharts(difficultyCounts, categoryCounts) {
           grid: { color: "rgba(148, 163, 184, 0.14)" },
         },
         y: {
-          ticks: { font: { family: "Manrope", weight: "700" } },
+          ticks: { autoSkip: false, font: { family: "Manrope", weight: "700" } },
           grid: { display: false },
         },
       },

@@ -507,6 +507,14 @@ body {
   height: 320px !important;
 }
 
+.category-chart-wrap {
+  min-height: 620px;
+}
+
+.category-chart-wrap canvas {
+  height: 620px !important;
+}
+
 .leetcode-group {
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.18);
